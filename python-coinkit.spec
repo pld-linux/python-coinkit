@@ -25,6 +25,7 @@ BuildRequires:	python3-devel
 BuildRequires:	python3-modules
 %endif
 BuildRequires:	rpm-pythonprov
+Requires:	python-ecdsa >= 0.10
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,6 +36,7 @@ Tools for Bitcoin and other cryptocurrencies.
 Summary:	Tools for Bitcoin and other cryptocurrencies
 Group:		Libraries/Python
 Requires:	python3
+Requires:	python3-ecdsa >= 0.10
 
 %description -n python3-%{module}
 Tools for Bitcoin and other cryptocurrencies.
