@@ -13,6 +13,7 @@ Group:		Libraries/Python
 Source0:	https://github.com/halfmoonlabs/coinkit/archive/v%{version}.tar.gz
 # Source0-md5:	2e5bd02391fa38766a5644e7abfa9750
 URL:		https://github.com/halfmoonlabs/coinkit
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	rpm-pythonprov
 %if %{with python2}
 BuildRequires:	python-devel
