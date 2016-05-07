@@ -3,11 +3,11 @@
 %bcond_without	python2		# Python 2.x module
 %bcond_without	python3		# Python 3.x module
 
-%define 	module	coinkit
+%define		module	coinkit
 Summary:	Tools for Bitcoin and other cryptocurrencies
 Name:		python-%{module}
 Version:	0.3
-Release:	5
+Release:	6
 License:	MIT
 Group:		Libraries/Python
 Source0:	https://github.com/halfmoonlabs/coinkit/archive/v%{version}.tar.gz
@@ -46,30 +46,22 @@ Tools for Bitcoin and other cryptocurrencies.
 
 %build
 %if %{with python2}
-%py_build --build-base py2
+%py_build
 %endif
 %if %{with python3}
-%py3_build --build-base py3
+%py3_build
 %endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %if %{with python2}
 install -d $RPM_BUILD_ROOT%{_examplesdir}/python-%{module}-%{version}
-%py_build \
-	--build-base py2 \
-	install \
-	--optimize 2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 %endif
 
 %if %{with python3}
 install -d $RPM_BUILD_ROOT%{_examplesdir}/python3-%{module}-%{version}
-%py3_build \
-	--build-base py3 \
-	install \
-	--optimize 2 \
-	--root=$RPM_BUILD_ROOT
+%py3_install
 %endif
 
 %clean
