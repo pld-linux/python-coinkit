@@ -7,7 +7,7 @@
 Summary:	Tools for Bitcoin and other cryptocurrencies
 Name:		python-%{module}
 Version:	0.3
-Release:	8
+Release:	9
 License:	MIT
 Group:		Libraries/Python
 Source0:	https://github.com/halfmoonlabs/coinkit/archive/v%{version}.tar.gz
