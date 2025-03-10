@@ -8,7 +8,7 @@ Summary:	Tools for Bitcoin and other cryptocurrencies
 Summary(pl.UTF-8):	Narzędzia do Bitcoinów i innych kryptowalut
 Name:		python-%{module}
 Version:	0.3
-Release:	14
+Release:	15
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://github.com/halfmoonlabs/coinkit/releases
